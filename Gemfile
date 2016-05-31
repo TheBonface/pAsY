@@ -46,6 +46,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem'guard-bundler'
   gem'guard-rails'
+  gem 'bootstrap-sass'
 end
 
 group:test do
