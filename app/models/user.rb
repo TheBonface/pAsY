@@ -1,4 +1,4 @@
 class User < ApplicationRecord::Base
-	validates :name, presence: true, length: {maimum:50}
-	validates :email, presence: true, length: {maximum:255}
+	validates :name, presence: true
+	validates :email, presence: true
 end
