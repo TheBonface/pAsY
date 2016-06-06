@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
  gem 'bootstrap-sass'
 
+
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -36,6 +37,7 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'sqlite3'
   gem 'guard'
+
 end
 
 group :development do
@@ -54,6 +56,7 @@ group:test do
 	gem'minitest-reporters'
 	gem'mini_backtrace'
 	gem'guard-minitest'
+  gem 'rails-controller-testing'
 	end
 
 
