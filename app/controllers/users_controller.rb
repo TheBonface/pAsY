@@ -11,7 +11,7 @@ def new
 end
 
 def create
-	@user= User.new(user_params) #not the final implimentation 
+	@user = User.new(user_params) #not the final implimentation 
 if @user.save 	
 	flash[:success] = "Welcome to the Sample App!"
 	#handles a successful save
