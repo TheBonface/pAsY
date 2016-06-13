@@ -10,6 +10,7 @@ validates :email, presence: true, length: { maximum: 255 },
 has_secure_password
 validates :password, length: { minimum: 6 }
 #returns the hash digest of the given sttring 
+
 def User.digest(string )
 	cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST:
 
