@@ -46,7 +46,16 @@ module SessionsHelper
 	def log_out
 		forget(current_user)
 		session.delete(:user_id)
-		@current_user =nil
-		
-	end
+		@current_user =nil 
+    end
+    #redirects to store location (or to the default ).
+    def redirect_back_or(default)
+        redirect_to(session[:fowarding_url]|| default)
+        session.delete(:fowarding_url )
+    end 
+
+    #stores the URL trying to be accessed.
+    def store_location
+      session[:fowarding_url] = request.url if request.get?
+    end 
 end
