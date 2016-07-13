@@ -3,9 +3,9 @@ judy:
   email: judy@gmail.com
   password_digest:  <%= User.digest('password') %> 
 
-  bonface:
-    name: bonface
-    email: bonface@gmail.com
-    password_digest: <%= User.digest('password')%>
+bonface:
+  name: bonface
+  email: bonface@gmail.com 
+  password_digest: <%= User.digest('password')%>
 
    
