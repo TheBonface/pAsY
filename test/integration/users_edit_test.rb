@@ -9,7 +9,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     @user =users(:bonface)
   end 
 
-  test "unsuccessful edit" do
+  test "unsuccessful edit" do 
+    log_in_as(@user)
     get edit_user_path(@user)
     assert_templete 'users/edit'
     patch user_path(@users), user: { name: "",
@@ -19,7 +20,8 @@ class UsersEditTest < ActionDispatch::IntegrationTest
     assert_templete 'users/edit'
   end 
 
-  test "successful edit" do 
+  test "successful edit" do  
+    log_in_as(@user)
     get edit_user_path(@user)
     assert_templete 'users/edit'
     name = "Foo Bar"
