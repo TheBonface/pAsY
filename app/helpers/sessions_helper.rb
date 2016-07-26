@@ -13,16 +13,16 @@ module SessionsHelper
 	end
 	#returns the current logged-in user (if any)
 
-  	def current_user
-		if (user_id = session[:user_id])
-		@current_user ||= User.find_by(id: user_id)
-		elsif (user_id = cookies.signed[:user_id])
-		user = User.find_by(id: user_id)
-		if user && user.authenticated?(cookies[:remember_token])
-		log_in user
-		@current_user = user
-		end
-		end
+    def current_user
+      if (user_id = session[:user_id])
+        @current_user ||= User.find_by(id: user_id)
+      elsif (user_id = cookies.signed[:user_id])
+        user = User.find_by(id: user_id)
+        if user && user.authenticated?(cookies[:remember_token])
+          log_in user
+          @current_user = user
+        end
+      end
     end
     def current_user?(user)
       user == current_user 
@@ -50,12 +50,12 @@ module SessionsHelper
     end
     #redirects to store location (or to the default ).
     def redirect_back_or(default)
-        redirect_to(session[:fowarding_url]|| default)
-        session.delete(:fowarding_url )
+        redirect_to(session[:forwarding_url]|| default)
+        session.delete(:forwarding_url )
     end 
 
     #stores the URL trying to be accessed.
     def store_location
-      session[:fowarding_url] = request.url if request.get?
+      session[:forwarding_url] = request.url if request.get?
     end 
 end

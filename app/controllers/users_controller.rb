@@ -20,7 +20,7 @@ end
     if @user.save 	
       log_in @user
 
-      flash[:success] = "Welcome to the Sample App!" 
+      flash[:success] = "Welcome to the pAsY!" 
       #handles a successful save
 	redirect_to @user
 else
@@ -44,9 +44,9 @@ def update
 end 
 private
 	def user_params
-	params.require(:user).permit(:name ,:email , :password , :password_confirmation)
+      params.require(:user).permit(:name ,:email , :password , :password_confirmation)
 	
-end
+    end
     #before filters 
     #confirm a logge-in user 
     def logged_in_user 
@@ -59,7 +59,7 @@ end
     #confirms the correct user
      def correct_user 
        @user = User.find(params[:id])
-       redirect_to(root_url) unless @user == current_user?(@user) 
+       redirect_to(root_url) unless current_user?(@user) 
      end 
 end 
 

@@ -5,8 +5,11 @@ source 'https://rubygems.org'
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt'
-
-
+gem 'pry'
+gem 'pry-rails'
+gem 'polylines'
+gem 'geocoder'
+gem 'gmaps4rails'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -17,7 +20,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
- gem 'bootstrap-sass'
+gem 'bootstrap-sass'
 
 
 # Use jquery as the JavaScript library
@@ -55,16 +58,16 @@ group :development do
 end
 
 group:test do
-	gem'minitest-reporters'
-	gem'mini_backtrace'
-	gem'guard-minitest'
+  gem'minitest-reporters'
+  gem'mini_backtrace'
+  gem'guard-minitest'
   gem 'rails-controller-testing'
-	end
+end
 
 
 group :production do
-	gem 'pg'
-	end
+  gem 'pg'
+end
 
 
 
