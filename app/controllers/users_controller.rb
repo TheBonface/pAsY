@@ -22,7 +22,7 @@ end
 
       flash[:success] = "Welcome to the pAsY!" 
       #handles a successful save
-	redirect_to @user
+	redirect_to new_location_path
 else
   render 'new'
 end

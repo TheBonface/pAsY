@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+
+ <strong>Country:</strong>
+  <%= @location.country %>
+  </p>
 <p>
-  <strong>Address:</strong>
-  <%= @location.address %>
+  <strong>County:</strong>
+  <%= @location.county %>
 </p>
 
 <p>
@@ -14,6 +18,30 @@
   <strong>Longitude:</strong>
   <%= @location.longitude %>
 </p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Street Name:</strong>
+  <%= @location.street_name %>
+</p>
+<p>
+ <p>
+  <strong>Plot Number:</strong>
+  <%= @location.plot_number %></p>
+
+<p>
+  <strong>Door Number:</strong>
+  <%= @location.door_number %>
+</p>
+<p>
+  <strong>zipcode:</strong>
+  <%= @location.zipcode %>
+</p>
+
 
 <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
 <%# <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %1> %>
