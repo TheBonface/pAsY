@@ -20,8 +20,8 @@ end
     if @user.save 	
       log_in @user
 
-      flash[:success] = "Welcome to the pAsY!" 
-      #handles a successful save
+      flash[:success] = "Welcome  #{@user.name.upcase}  , You are 50% away from having your Address!  Please continue by filling the form 
+      "      #handles a successful save
 	redirect_to new_location_path
 else
   render 'new'

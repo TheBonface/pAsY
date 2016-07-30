@@ -1,12 +1,34 @@
 <% provide(:title, "Home") %>
-<div class="center jumbotron">
-<h1>Welcome to Physical Addressing System App</h1>
-<h2>
-This is the home page for 
-<%=link_to"pAsY", about_path%>
-(Physical Addressing System)
-</h2>
-<%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-success" %>
-</div>
-<%= link_to image_tag("rails.png", alt: "Rails logo"),
-'http://rubyonrails.org/' %>
+   <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message">
+                    <h1><%=link_to"pAsY", about_path%>
+</h1>
+                        <h3>Welcome to Physical Addressing System App Home page</h3>
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <%# <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a> %>
+                                    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-default" %>
+
+                            </li>
+                            <li>
+                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
