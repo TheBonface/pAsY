@@ -4,6 +4,8 @@
 /* universal */
 body {
 padding-top: 60px;
+
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 section {
 overflow: auto;
@@ -262,14 +264,14 @@ html {
     height: 100%;
 }
 
-body,
+// body,
+a,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
 
@@ -429,11 +431,11 @@ a:hover {
 }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
-  background-color: #43ed46;
+  background-color: #007d2f;
 }
 
 .dropdown-menu .divider {  
-    background-color: #43ed46;
+    background-color:#43ed46;
 }
 .btn-default:hover {
     color: #333;

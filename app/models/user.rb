@@ -1,5 +1,7 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
+  # belongs_to:location
+  belongs_to :location, optional: true
 
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }

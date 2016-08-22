@@ -16,7 +16,7 @@
 
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                                <a href="https://github.com/thebonface" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                             </li>
                             <li>
                                 <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
@@ -29,46 +29,71 @@
         </div>
         <!-- /.container -->
 
-    </div>
-    <!-- /.intro-header -->
-<%# ------------------------------------------the services section --------------- %>
-<div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Select the service you require
-                </h1>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Own an Address</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Search for an address</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-success">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-compass"></i> Faq</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <%= link_to "Learn More", faq_path, class: "btn  btn-default" %>
-                        <%# <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-default" %1> %>
+   </div>
+   <!-- /.intro-header -->
+   <%# ------------------------------------------the services section --------------- %>
+   <div class="row">
+       <div class="col-lg-12">
+           <h1 class="page-header">
+               Select the service you require
+           </h1>
+       </div>
+       <div class="col-md-4">
+           <div class="panel panel-success">
+               <div class="panel-heading">
+                   <h4><i class="fa fa-fw fa-gift"></i> Own an Address</h4><br/>
+               </div>
+               <div class="panel-body">
+                   <h5>Why own an address? </h5>
+
+                        <ul>
+                            <li>  Improving emergency response times</li>
+
+                            <li> Reducing travel time with more effective signage</li>
+
+                            <li> Helping to reduce environmental impact</li>
+
+                            <li> Charting public health more accurately</li>
+
+                            <li>Expanding exploration by residents and tourists</li>
+
+                            <li> Delivering goods, simpler and quicker</li >
+
+                            <li>Tapping into the growth of local and global online commerce </li>
+                        </ul>
+                        <%= link_to "Go ahead", signup_path, class: "btn  btn-default" %>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-4">
+           <div class="panel panel-success">
+               <div class="panel-heading">
+                   <h4><i class="fa fa-fw fa-check"></i> Search for an address</h4>
+               </div>
+               <div class="panel-body">
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
+                   <a href="#" class="btn btn-default">Learn More</a>
+               </div>
+           </div>
+       </div>
+       <div class="col-md-4">
+           <div class="panel panel-success">
+               <div class="panel-heading">
+                   <h4><i class="fa fa-fw fa-compass"></i> Faq</h4>
+               </div>
+               <div class="panel-body">
+                   <dl>
+                       <dt>Q1: what is pAsY about? </dt>
+                       <dd> pAsY is a smart new physical addressing system for developing countries , it fulfils  the highest international standards. 
+                       much faster,it is easier and smarter to find any building, location or street by assigning new addresses . In addition</dd>
+                       <dd> pAsY  uses the latest technology for maximum accurency  ,
+                       fulfilling the highest international standards. It makes it much faster, easier and smarter to find any building, location or street by assigning new addresses that proudly reflect our actual ground locations.</dd>
+                       <br> <dt> Q2:How can I start using the pAsY system?</dt>
+                       <dd>2a: The system assigns new addresses to all buildings, locations and streets. Use our interactive map or Google Map to find any address, any time, send and share your locations </dd>
+                   </dl>
+                   <%= link_to "Learn More", faq_path, class: "btn  btn-default" %>
+                   <%# <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-default" %1> %>
 
                     </div>
                 </div>

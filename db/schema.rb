@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160727075158) do
+ActiveRecord::Schema.define(version: 20160808131342) do
 
   create_table "locations", force: :cascade do |t|
     t.string   "address"
@@ -25,6 +25,8 @@ ActiveRecord::Schema.define(version: 20160727075158) do
     t.string   "zipcode"
     t.string   "plot_number"
     t.string   "county"
+    t.integer  "user_id"
+    t.index ["user_id"], name: "index_locations_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -34,6 +36,8 @@ ActiveRecord::Schema.define(version: 20160727075158) do
     t.datetime "updated_at",      null: false
     t.string   "password_digest"
     t.string   "remember_digest"
+    t.integer  "location_id"
+    t.index ["location_id"], name: "index_users_on_location_id"
   end
 
 end

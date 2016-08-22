@@ -47,9 +47,9 @@
 <%# <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %1> %>
 <h3>Nearby locations</h3>
 <ul>
-<% for location in @location.nearbys(10) %>
-  <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> kilometers)</li>
-<% end %>
+<%# <% for location in @location.nearbys(10) %1> %>
+<%#   <li><%= link_to location.address, location %1> (<%= location.distance.round(2) %1> kilometers)</li> %>
+<%# <% end %1> %>
 </ul><%= link_to 'Edit', edit_location_path(@location) %> |
 <%= link_to 'Back', locations_path %>
 <%= link_to "View All",locations_path %>
