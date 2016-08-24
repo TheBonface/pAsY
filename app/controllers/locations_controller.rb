@@ -28,8 +28,7 @@ class LocationsController < ApplicationController
   # POST /locations.json
   def create
 
-    @location = Location.new(location_params)
-
+    @location = current_user.locations.build(location_params)
     respond_to do |format|
       if @location.save
         format.html { redirect_to @location, notice: 'Location was successfully created.' }
@@ -59,11 +58,13 @@ class LocationsController < ApplicationController
   # DELETE /locations/1.json
   def destroy
     @location.destroy
-    respond_to do |format|
-      format.html { redirect_to locations_url, notice: 'Location was successfully destroyed.' }
-      format.json { head :no_content }
+    flash[:sucess] = "Location deleted "
+    redirect_to request.referrer || root_url
+    # respond_to do |format|
+    #   format.html { redirect_to locations_url, notice: 'Location was successfully destroyed.' }
+    #   format.json { head :no_content }
     end
-  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -75,4 +76,8 @@ class LocationsController < ApplicationController
     def location_params
       params.require(:location).permit(:address, :latitude, :longitude, :street_name, :county, :country, :door_number , :zipcode , :plot_number)
     end
+    def correct_user
+      @location.current_user.locations.find_by(id: params[:id])
+      redirect_to root_url if @location.nil?
+    end 
 end

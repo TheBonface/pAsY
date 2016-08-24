@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user , only: [:edit, :update]
+  before_action :logged_in_user , only: [:edit, :update,:idex, :destroy]
   before_action :correct_user, only: [:edit, :update]
 
   def index 
-    @users =User.all 
+    @users =User.paginate(page: params[:page])
   end 
 
   def show
     @user = User.find(params[:id])
+    @locations = @user.locations.paginate(page: params[:page])
   end
 
   def new
@@ -42,6 +43,14 @@ class UsersController < ApplicationController
       render 'edit' 
     end 
   end 
+  def destroy
+    User.find(params[:id]).destroy
+    flash[:success] = "User deleted, You happy now?"
+    redirect_to users_url
+  end 
+
+
+
   private
   def user_params
     params.require(:user).permit(:name ,:email , :password , :password_confirmation)

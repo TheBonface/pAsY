@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   attr_accessor :remember_token
   # belongs_to:location
-  belongs_to :location, optional: true
+  has_many :locations , dependent: :destroy 
 
   before_save { self.email = email.downcase }
   validates :name, presence: true, length: { maximum: 50 }
@@ -23,6 +23,11 @@ class User < ApplicationRecord
   def User.new_token
     SecureRandom.urlsafe_base64
   end
+
+  def activate 
+  update_attribute(:activated, true)
+  update_attribute(:activated_at, Time.zone.now)
+  end 
   
   # Remembers a user in the database for use in persistent sessions.
   def remember
@@ -31,8 +36,11 @@ class User < ApplicationRecord
   end
 
   # Returns true if the given token matches the digest.
-  def authenticated?(remember_token)
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
+ def authenticated?(attribute, token)
+	digest = send("#{attribute}_digest")
+	return false if digest.nil?
+	BCrypt::Password.new(digest).is_password?(token)
+    # BCrypt::Password.new(remember_digest).is_password?(remember_token)
   end
 
   # Forgets a user.
