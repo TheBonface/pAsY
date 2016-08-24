@@ -1,5 +1,7 @@
 class Location < ApplicationRecord
- has_many :users
+ belongs_to :user
+
+ validates :user_id, presence: true 
  # belongs_to :user
 geocoded_by :address
 after_validation :geocode, :if => :address_changed?
