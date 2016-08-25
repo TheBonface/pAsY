@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-   <title> <%=yield(:title) %> | Physical Addressing System</title>
-    <%= stylesheet_link_tag 'application', media: 'all',
-'data-turbolinks-track' => true %>
-<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-<%= csrf_meta_tags %>
-<%= render 'layouts/shim' %>
-  
-  </head>
- <body>
-<%= render 'layouts/header' %>
-<div class="container">
-<% flash.each do |message_type, message| %>
-<%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+    <head>
+        <title> <%=yield(:title) %> | Physical Addressing System</title>
+        <%# <%= include_gon %1> %>
+        <%= stylesheet_link_tag 'application', media: 'all',
+            'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+        <%= render 'layouts/shim' %>
 
-<% end %>
+    </head>
+    <body>
+        <%= render 'layouts/header' %>
+        <div class="container">
+            <% flash.each do |message_type, message| %>
+                <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
 
-<%= yield %>
-<%= render 'layouts/footer' %>
-<%= debug(params) if Rails.env.development? %>
-</div>
-</body>
-  </body>
+            <% end %>
+
+            <%= yield %>
+            <%= render 'layouts/footer' %>
+            <%= debug(params) if Rails.env.development? %>
+        </div>
+    </body>
+    </body>
 </html>
