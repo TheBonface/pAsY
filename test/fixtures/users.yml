@@ -8,4 +8,7 @@ bonface:
   email: bonface@gmail.com 
   password_digest: <%= User.digest('password')%>
 
-   
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  password_digests: <%= User.digest('password')%>
