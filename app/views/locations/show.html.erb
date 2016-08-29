@@ -1,49 +1,39 @@
-<p id="notice"><%= notice %></p>
+<%# <p id="notice"><%= notice %1></p> %>
+<div class="container-fluid"><div class="row">
+    <div class="col-xs-6 col-md-4">
+  <ul class="list-group">
+  <li class="list-group-item">
+ <strong>Country:</strong>  <%= @location.country %>
+</li>
+  <li class="list-group-item"><strong>County   :</strong>  <%= @location.county %>
+
+</li>
+<li class="list-group-item"> <strong>Latitude  :</strong>  <%= @location.latitude %>
+</li>
+<li class="list-group-item">  <strong>Longitude:</strong> <%= @location.longitude %>
+</li>
+<li class="list-group-item"> <strong>Estate:</strong> <%= @location.address %>
+</li>
+
+<li class="list-group-item"> <strong>Street Name:</strong> <%= @location.street_name %>
+</li>
+<li class="list-group-item">  <strong>Plot Number:</strong> <%= @location.plot_number %></li>
+
+<li class="list-group-item">  <strong>Door Number:</strong> <%= @location.door_number %>
+</li>
+<li class="list-group-item">  <strong>zipcode:</strong> <%= @location.zipcode %>
+</li>
+  </ul>    
+    </div>
+    <div class="col-xs-12 col-md-8"><%= image_tag "http://maps.google.com/maps/api/staticmap?size=800x400&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+    </div>
+
+    </div>
+    </div>
 
 
- <strong>Country:</strong>
-  <%= @location.country %>
-  </p>
-<p>
-  <strong>County:</strong>
-  <%= @location.county %>
-</p>
-
-<p>
-  <strong>Latitude:</strong>
-  <%= @location.latitude %>
-</p>
-
-<p>
-  <strong>Longitude:</strong>
-  <%= @location.longitude %>
-</p>
-
-<p>
-  <strong>Address:</strong>
-  <%= @location.address %>
-</p>
-
-<p>
-  <strong>Street Name:</strong>
-  <%= @location.street_name %>
-</p>
-<p>
- <p>
-  <strong>Plot Number:</strong>
-  <%= @location.plot_number %></p>
-
-<p>
-  <strong>Door Number:</strong>
-  <%= @location.door_number %>
-</p>
-<p>
-  <strong>zipcode:</strong>
-  <%= @location.zipcode %>
-</p>
 
 
-<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
 <%# <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %1> %>
 <h3>Nearby locations</h3>
 <ul>
