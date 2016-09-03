@@ -6,6 +6,7 @@ gem 'rails', '>= 5.0.0.rc1', '< 5.1'
 # Use sqlite3 as the database for Active Record
 gem 'bcrypt'
 gem 'pry'
+gem 'faker'
 gem 'pry-rails'
 gem 'polylines'
 gem 'geocoder'
