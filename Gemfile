@@ -10,6 +10,7 @@ gem 'faker'
 gem 'pry-rails'
 gem 'polylines'
 gem 'geocoder'
+gem 'country_select'
 gem 'gmaps4rails'
 gem "font-awesome-rails"
 # Use Puma as the app server

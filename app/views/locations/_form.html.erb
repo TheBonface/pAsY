@@ -33,12 +33,53 @@
 
   <div class="field">
     <%= f.label :country %>
-    <%= f.text_field :country  , class: 'form-control'  %>
+    <%= f.country_select :country  , class: 'form-control'  %>
   </div>
 
   <div class="field">
       <%= f.label :county %>
-    <%= f.text_field :county , class: 'form-control' %>
+      <%= f.select :county ,["Mombasa","Kwale", "Kilifi", "Tana River", "Lamu",
+                             "Taita-Taveta", 
+                             "Garissa", 
+                             " wajir",
+                             "Mandera", 
+                             "Marsabit", 
+                             "Isiolo ",
+                             " Meru" ,
+                             " Tharaka-Nithi", 
+                             "Embu", 
+                             "Kitui", 
+                             "Machakos", 
+                             " Makueni", 
+                             "Nyandarua", 
+                             "Nyeri", 
+                             "Kirinyaga", 
+                             "Murang'a", 
+                             "Kiambu", 
+                             "Turkana", 
+                             " West Pokot", 
+                             "Samburu",
+                             "Trans Nzoia", 
+                             "Uasin Gishu", 
+                             "Elgeyo-Marakwet", 
+                             "Nandi", 
+                             "Baringo", " Laikipia",
+                             "Nakuru", 
+                             "Narok", 
+                             " Kajiado ",
+                             "Kericho", 
+                             "Bomet", 
+                             "Kakamega", 
+                             "Vihiga", 
+                             "Bungoma", 
+                             "Busia",
+                             "Siaya", 
+                             "Kisumu", 
+                             "Homa Bay", 
+                             "Migori", 
+                             "Kisii", 
+                             "Nyamira", 
+                             " Nairobi City" ] , class: 'form-control' %>
   </div>
 
   <div class="field">
