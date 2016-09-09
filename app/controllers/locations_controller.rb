@@ -7,7 +7,9 @@ class LocationsController < ApplicationController
     if params[:search]
       @locations = Location.near(params[:search], 100, :order => :distance)
     else
-      @locations = Location.all
+      @locations = Location.all 
+# @json = User.all.to_gmaps4rails
+
     end
   end
   # GET /locations/1

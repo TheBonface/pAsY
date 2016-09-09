@@ -14,5 +14,8 @@ delete 'logout' =>'sessions#destroy'
 get 'locations'=> 'locations#index'
 get 'editlocation'=> 'locations#edit'
 
-resources :users
+resources :users do
+resources :microposts,      only: [:create, :destroy]
+resources :relationships,   only: [:create, :destroy]
 end
+end 
