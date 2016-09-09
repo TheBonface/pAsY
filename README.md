@@ -13,7 +13,7 @@ ruby 2.3.0p0
 
 * System dependencies
 
-'''source 'https://rubygems.org'
+'source 'https://rubygems.org'
 
 
 gem 'rails', '>= 5.0.0.rc1', '< 5.1'
@@ -101,7 +101,7 @@ gem 'pg'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-'''
+'
 
 * Configuration
 
