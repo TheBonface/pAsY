@@ -1,0 +1,8 @@
+title: Pasy
+description: "Physical addressing System app "
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
